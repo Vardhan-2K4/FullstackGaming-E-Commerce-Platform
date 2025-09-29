@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Nintendo - V L V 道場{% endblock %}
+
+{% block content %}
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <article class="card h-100">
+                <img src="{{ url_for('static', filename='images/nintendo2.jpeg') }}" class="card-img-top" alt="Nintendo">
+                <div class="card-body">
+                    <h2 class="card-title">The Nintendo</h2>
+                    <p class="card-text">Nintendo Co., Ltd. is a Japanese multinational video game company headquartered in Kyoto. It develops, publishes and releases both video games and video game consoles.</p>
+                    <p class="card-text">Since then, Nintendo has produced some of the most successful consoles in the video game industry, such as the Game Boy, the Super Nintendo Entertainment System, the Nintendo DS, the Wii, and the Switch.</p>
+                    <h3 class="mt-4">More</h3>
+                    <p class="card-text">Nintendo and its staff have received awards including Emmy Awards for Technology & Engineering, Game Awards, Game Developers Choice Awards, and British Academy Games Awards.</p>
+                    <h3 class="mt-4">So in conclusion ...</h3>
+                    <p class="card-text">Nintendo reshaped gaming culture with iconic franchises and accessible hardware.</p>
+                </div>
+            </article>
+        </div>
+        <div class="col-lg-4">
+            <section class="card mb-4">
+                <img src="{{ url_for('static', filename='images/nintendo1.jpeg') }}" class="card-img-top" alt="Mario">
+                <div class="card-body">
+                    <h3 class="card-title">The MARIO</h3>
+                    <p class="card-text">This is the creator of the legendary Mario.</p>
+                    <a href="https://www.nintendo.com" class="btn btn-outline-primary">Read more</a>
+                </div>
+            </section>
+            <section class="card">
+                <div class="card-body">
+                    <h3 class="card-title">The Editions</h3>
+                    <ul class="list-unstyled mb-3">
+                        <li><a href="https://www.nintendo.com/store/products/nintendo-switch-oled-model-115461-3/">Switch OLED</a></li>
+                        <li><a href="https://www.nintendo.com/store/products/nintendo-switch-lite-coral/">Switch Lite</a></li>
+                        <li><a href="https://www.nintendo.com/store/products/detective-pikachu-returns-switch/">Detective Pikachu Returns</a></li>
+                    </ul>
+                    <a href="https://www.nintendo.com/store/hardware/systems" class="btn btn-outline-success">Buy now</a>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+	

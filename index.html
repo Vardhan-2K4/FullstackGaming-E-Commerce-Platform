@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}V L V 道場 - Home{% endblock %}
+
+{% block content %}
+    <section id="banner" class="mb-4">
+        <header>
+            <h2>Gaming Redefined</h2>
+            <p>Gamers don't die they respawn </p>
+        </header>
+    </section>
+
+    <section id="intro" class="container">
+        <div class="row">
+            <div class="col-4 col-12-medium">
+                <section class="first">
+                    <i class="icon solid featured fa-cog"></i>
+                    <header>
+                        <h2>Play Responsible</h2>
+                    </header>
+                    <p>It is not about how much you play it is about how you play </p>
+                </section>
+            </div>
+            <div class="col-4 col-12-medium">
+                <section class="middle">
+                    <i class="icon solid featured alt fa-bolt"></i>
+                    <header>
+                        <h2>Reflexes Are Fatal</h2>
+                    </header>
+                    <p>Stay aware of the in game surrounding to ensure u are giving maximum chaos</p>
+                </section>
+            </div>
+            <div class="col-4 col-12-medium">
+                <section class="last">
+                    <i class="icon solid featured alt2 fa-star"></i>
+                    <header>
+                        <h2>Take wins</h2>
+                    </header>
+                    <p>There is only one man that will stand at the last. Make Sure it is you</p>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <ul class="actions">
+                <li><a href="#" class="button large">Get Started</a></li>
+                <li><a href="#" class="button alt large">Learn More</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <section id="main1" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <section>
+                        <header class="major">
+                            <h2>Games that are worth rembering</h2>
+                        </header>
+                        <div class="row">
+                            <div class="col-4 col-6-medium col-12-small">
+                                <section class="box1">
+                                    <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/desktop-wallpaper-pubg-mobile-frost-festival-games-backgrounds-and-pubg-mobile-2021.jpg') }}" alt="" /></a>
+                                    <header>
+                                        <h3> Battle Grounds Mobile India </h3>
+                                    </header>
+                                    <p>Battlegrounds Mobile India (BGMI, previously known as PUBG Mobile India) is the Indian version of PUBG Mobile...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{{ url_for('game_page', game_name='bgmi') }}" class="button alt">Find out more</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="col-4 col-6-medium col-12-small">
+                                <section class="box1">
+                                    <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/criminal.png') }}" alt="" /></a>
+                                    <header>
+                                        <h3> Free Fire </h3>
+                                    </header>
+                                    <p>Free Fire is a battle royale game developed and published by Garena for Android and iOS...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{{ url_for('game_page', game_name='freefire') }}" class="button alt">Find out more</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                             <div class="col-4 col-6-medium col-12-small">
+                                <section class="box1">
+                                    <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/Fmvo7nPacAA-cVV.jpg') }}" alt="" /></a>
+                                    <header>
+                                        <h3> Valorant </h3>
+                                    </header>
+                                    <p>Valorant (stylized as VALORANT) is a free-to-play first-person tactical hero shooter developed and published by Riot Games...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="{{ url_for('game_page', game_name='valorant') }}" class="button alt">Find out more</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <header class="major">
+                            <h2>The Blog</h2>
+                        </header>
+                        <div class="row">
+                             <div class="col-6 col-12-small">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/sentinels-roster.jpg') }}" alt="" /></a>
+                                    <header>
+                                        <h3>The Senitnels </h3>
+                                        <p>The OG"s </p>
+                                    </header>
+                                    <p>Sentinels is an American esports organization based in Los Angeles, California...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="https://www.sentinels.gg/" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                            <li><a href="#" class="button alt icon solid fa-comment">33 comments</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                             <div class="col-6 col-12-small">
+                                <section class="box">
+                                    <a href="#" class="image featured"><img src="{{ url_for('static', filename='images/team-soul-new-lineup.webp') }}" alt="" /></a>
+                                    <header>
+                                        <h3>Team Soul</h3>
+                                        <p> The torch bearers </p>
+                                    </header>
+                                    <p>Team SouL was formed as a PUBG Mobile team in 2018 to compete in the DreamHack event held in Mumbai...</p>
+                                    <footer>
+                                        <ul class="actions">
+                                            <li><a href="https://www.instagram.com/soulesportsofficial/?hl=en" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                                            <li><a href="#" class="button alt icon solid fa-comment">33 comments</a></li>
+                                        </ul>
+                                    </footer>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="max-width: 600px;">
+        <header class="major">
+            <h2>Contact Us</h2>
+        </header>
+        <form id="contact-form" action="{{ url_for('submit') }}" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="form-error" class="mt-3 text-danger" style="display:none;">Please fill out all fields correctly.</div>
+        <div id="form-success" class="mt-3 alert alert-success" style="display:none;">Form looks good! Submitting...</div>
+    </section>
+{% endblock %}
