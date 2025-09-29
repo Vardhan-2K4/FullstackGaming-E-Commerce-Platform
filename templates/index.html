@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="mb-4 text-center" style="background: url('{{ url_for('image_static', filename='modern-warfare-ii.jpg') }}') no-repeat center/cover; border-radius: .5rem;">
+  <div class="p-4" style="background-color: #32CD32; border-radius: .5rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h1 class="display-5">Gaming Redefined</h1>
+    <p class="lead">Gamers don't die they respawn</p>
+  </div>
+  <div class="row g-4 mt-2">
+    <div class="col-md-4">
+      <div class="card h-100 bg-lime">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Play Responsible</h5>
+          <p class="card-text">It is not about how much you play it is about how you play</p>
+          <div class="mt-auto"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 bg-lime">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Reflexes Are Fatal</h5>
+          <p class="card-text">Stay aware of the in game surrounding to ensure u are giving maximum chaos</p>
+          <div class="mt-auto"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 bg-lime">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Take wins</h5>
+          <p class="card-text">There is only one man that will stand at the last. Make Sure it is you</p>
+          <div class="mt-auto"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 mt-3">
+    <a href="{{ url_for('login') }}" class="btn btn-primary">Get Started</a>
+  </div>
+</section>
+
+<section class="mb-5" style="background: url('{{ url_for('image_static', filename='modern-warfare-ii.jpg') }}') no-repeat center/cover; border-radius: .5rem;">
+  <div class="p-3" style="background-color: rgba(255,255,255,0.9); border-radius: .5rem;">
+  <h2 class="h3 mb-3">Games that are worth rembering</h2>
+  <div class="row g-4">
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="{{ url_for('bgmi') }}" style="display: block; width: 100%; text-decoration: none;">
+          <img src="{{ url_for('image_static', filename='desktop-wallpaper-pubg-mobile-frost-festival-games-backgrounds-and-pubg-mobile-2021.jpg') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="BGMI" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">Battle Grounds Mobile India</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Battlegrounds Mobile India (BGMI, previously known as PUBG Mobile India) is the Indian version of PUBG Mobile, exclusively for players in India.  multiplayer battle royale game developed and published by Krafton. The game was initially released on 2 July 2021 for Android devices, and on 18 August 2021 for iOS devices.As of July 2022, BGMI surpassed 130 million downloads on Google Play store.The game was banned in India on July 28, 2022, by the Indian government. According to a statement from Krafton, the ban was</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="{{ url_for('freefire') }}" style="display: block; width: 100%; text-decoration: none;">
+          <img src="{{ url_for('image_static', filename='criminal.png') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="Free Fire" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">Free Fire</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Free Fire is a battle royale game developed and published by Garena for Android and iOS. It is a free-to-play game that has become one of the most popular mobile games in the world. In each 10-minute game, players are placed on a remote island where they must fight to be the last one standing. Players can choose their starting point with their parachute, and they can loot weapons and items to help them survive. The safe zone in the game gradually shrinks, forcing players to confront each other. The game itself is a fast pased game</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="{{ url_for('valorant') }}" style="display: block; width: 100%; text-decoration: none;">
+          <img src="{{ url_for('image_static', filename='Fmvo7nPacAA-cVV.jpg') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="Valorant" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">Valorant</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Valorant (stylized as VALORANT) is a free-to-play first-person tactical hero shooter developed and published by Riot Games, for Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by a release on June 2, 2020. The development of the game started in 2014. Valorant takes inspiration from the Counter-Strike series of tactical shooters, borrowing several mechanics such as the buy menu, spray patterns, and inaccuracy while moving</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="{{ url_for('mw2') }}" style="display: block; width: 100%; text-decoration: none;">
+          <img src="{{ url_for('image_static', filename='8580.jpg') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="MW2" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">Call Of Duty MW 2</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Call of Duty: Modern Warfare II is a 2022 first-person shooter video game developed by Infinity Ward and published by Activision. It is a sequel to the 2019 reboot, and serves as the nineteenth installment in the overall Call of Duty series. It was released on October 28, 2022 for PlayStation 4, PlayStation 5, Windows, Xbox One, and Xbox Series X/S.Modern Warfare II received generally favorable reviews from critics. It was a commercial success and broke several records for the series, including becoming the fastest Call of Duty game to generate US$1 billion in revenue.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="{{ url_for('gta5') }}" style="display: block; width: 100%; text-decoration: none;">
+          <img src="{{ url_for('image_static', filename='Dlok9kpTURBXy82ZTVmYzljMTYzMjBlODM4MjFjYzI0OTRhMzgwY2VlNS5qcGeSlQMCAM0KCs0FpZMFzQSwzQKk3gACoTABoTEA.jpeg') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="GTA V" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">Grand Theft Auto V</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008's Grand Theft Auto IV, and the fifteenth instalment overall. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three protagonists—retired bank robber Michael De Santa, street gangster Franklin Clinton, and drug dealer and gunrunner Trevor Philips—and their attempts to commit heists while under pressure from a corrupt government agency</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 d-flex">
+      <div class="card d-flex flex-column w-100" style="background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="https://store.rockstargames.com/game/buy-grand-theft-auto-the-trilogy-the-definitive-edition" style="display: block; width: 100%; text-decoration: none;" target="_blank" rel="noopener">
+          <img src="{{ url_for('image_static', filename='egs-grandtheftautothetrilogythedefinitiveedition-rockstargames-s1-2560x1440-26130472112f.jpg') }}" style="display: block !important; width: 100% !important; height: 200px !important; object-fit: cover !important;" alt="GTA Trilogy" />
+        </a>
+        <div class="card-body" style="padding: 20px; background: white;">
+          <h5 class="card-title" style="color: #212529; margin-bottom: 15px;">GTA: The Triology</h5>
+          <p class="card-text" style="color: #6c757d; line-height: 1.5;">Grand Theft Auto: The Trilogy – The Definitive Edition is a 2021 compilation of three action-adventure games in the Grand Theft Auto series: Grand Theft Auto III (2001), Grand Theft Auto: Vice City (2002), and Grand Theft Auto: San Andreas (2004). It was developed by Grove Street Games[a] and published by Rockstar Games. All three games are remastered, with visual enhancements and gameplay upgrades. The games feature different protagonists and locations within the same continuity. Grand Theft Auto III follows silent protagonist Claude in Liberty City; Vice City</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="blog" class="mb-5" style="margin-bottom: 6rem !important; padding-bottom: 3rem !important; position: relative; z-index: 10;">
+  <h2 class="h3 mb-3">The Blog</h2>
+  <div class="row g-4" style="margin-bottom: 0 !important;">
+    <div class="col-md-6 d-flex">
+      <div class="card d-flex flex-column w-100" style="margin-bottom: 3rem !important; position: relative; z-index: 5;">
+        <img src="{{ url_for('image_static', filename='sentinels-roster.jpg') }}" class="card-img-top" alt="The Senitnels" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">The Senitnels</h5>
+          <p class="card-text">The OG"s</p>
+          <p class="card-text">Sentinels is an American esports organization based in Los Angeles, California. The organization was founded as the League of Legends team Phoenix1 and competed in the North American League of Legends Championship Series (NA LCS). In June 2018, Phoenix1 rebranded to Sentinels. The company currently fields teams in Valorant, Apex Legends, and Halo.</p>
+          <div class="mt-auto d-flex gap-2 flex-wrap" style="margin-top: 1.5rem !important; padding-top: 1.5rem !important; position: relative; z-index: 6;">
+            <a href="https://www.sentinels.gg/" target="_blank" rel="noopener" class="btn btn-outline-primary">Continue Reading</a>
+            <form method="post" action="{{ url_for('comment') }}" class="d-inline">
+              <input type="hidden" name="post_slug" value="sentinels">
+              <input type="hidden" name="content" value="Great read!">
+              <button type="submit" class="btn btn-outline-secondary" onclick="if(!{{ 'true' if session.get('user_id') else 'false' }}){alert('Please log in to comment.'); return false;}">33 comments</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex">
+      <div class="card d-flex flex-column w-100" style="margin-bottom: 3rem !important; position: relative; z-index: 5;">
+        <img src="{{ url_for('image_static', filename='team-soul-new-lineup.webp') }}" class="card-img-top" alt="Team Soul" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Team Soul</h5>
+          <p class="card-text"> The torch bearers </p>
+          <p class="card-text">Team SouL was formed as a PUBG Mobile team in 2018 to compete in the DreamHack event held in Mumbai, Maharashtra. Team SouL won PUBG Mobile India Series and won prize money of $41,806. Afterwards they won PMCO Spring Split 2019's Indian Championship and earned themselves a spot in the Global Finals.</p>
+          <div class="mt-auto d-flex gap-2 flex-wrap" style="margin-top: 1.5rem !important; padding-top: 1.5rem !important; position: relative; z-index: 6;">
+            <a href="https://www.instagram.com/soulesportsofficial/?hl=en" target="_blank" rel="noopener" class="btn btn-outline-primary">Continue Reading</a>
+            <form method="post" action="{{ url_for('comment') }}" class="d-inline">
+              <input type="hidden" name="post_slug" value="teamsoul">
+              <input type="hidden" name="content" value="Great read!">
+              <button type="submit" class="btn btn-outline-secondary" onclick="if(!{{ 'true' if session.get('user_id') else 'false' }}){alert('Please log in to comment.'); return false;}">33 comments</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="margin-top: 5rem !important; padding-top: 3rem !important; clear: both !important; position: relative; z-index: 1;">
+  <h2 class="h3 mb-3">Connect to us</h2>
+  <div class="row g-4">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Contact Form</h5>
+          <form id="contactForm" action="{{ url_for('submit') }}" method="post" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <div id="clientSuccess" class="alert alert-success mt-3 d-none" role="alert">Form submitted successfully!</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="{{ url_for('image_static', filename='Gaming-Wallpaper-01-1920-x-1080.jpg') }}" class="card-img-top" alt="About" />
+        <div class="card-body">
+          <h5 class="card-title">What's this all about?</h5>
+          <p class="card-text">This is <strong> V L V 's DOJO </strong> a fully responsive site template by <a href="https://www.instagram.com/itz__vardhu" target="_blank" rel="noopener">VLV</a> for <a href="https://www.amrita.edu/campus/amaravati" target="_blank" rel="noopener">For End sem project</a></p>
+          <a href="https://www.amrita.edu/campus/amaravati" class="btn btn-outline-secondary" target="_blank" rel="noopener">Find out more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+

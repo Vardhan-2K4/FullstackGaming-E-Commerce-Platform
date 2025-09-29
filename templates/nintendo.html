@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <!-- Hero Image Section -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <img src="{{ url_for('image_static', filename='nintendo2.jpeg') }}" class="img-fluid rounded shadow-lg" alt="Nintendo" style="max-height: 400px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+          <div class="card-body p-5">
+            <!-- Main Title Section -->
+            <div class="text-center mb-5">
+              <h1 class="display-4 fw-bold text-danger mb-3">Nintendo</h1>
+              <p class="lead text-muted fs-4">The Legendary Gaming Company</p>
+              <hr class="my-4" style="border-color: #dc3545; border-width: 2px;">
+            </div>
+
+            <!-- Game Description -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">About Nintendo</h2>
+              <p class="fs-5 lh-lg text-dark mb-4">
+                Nintendo Co., Ltd. is a Japanese multinational video game company headquartered in Kyoto. It develops, publishes and releases both video games and video game consoles. Nintendo was founded in 1889 as Nintendo Karuta by craftsman Fusajiro Yamauchi and originally produced handmade hanafuda playing cards.
+              </p>
+              <p class="fs-5 lh-lg text-dark">
+                After venturing into various lines of business during the 1960s and acquiring a legal status as a public company, Nintendo distributed its first console, the Color TV-Game, in 1977. It gained international recognition with the release of Donkey Kong in 1981 and the Nintendo Entertainment System and Super Mario Bros. in 1985.
+              </p>
+            </div>
+
+            <!-- Nintendo Franchises -->
+            <div class="row mb-5">
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-mushroom fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Super Mario</h4>
+                    <p class="mb-0">The iconic plumber who became the face of gaming worldwide</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-star fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">The Legend of Zelda</h4>
+                    <p class="mb-0">Epic adventure series that defined action-adventure gaming</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-gamepad fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Pokémon</h4>
+                    <p class="mb-0">The monster-catching phenomenon that captured hearts globally</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nintendo Success -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">Nintendo's Success</h2>
+              <div class="row">
+                <div class="col-lg-8">
+                  <p class="fs-5 lh-lg text-dark mb-4">
+                    Since then, Nintendo has produced some of the most successful consoles in the video game industry, such as the Game Boy, the Super Nintendo Entertainment System, the Nintendo DS, the Wii, and the Switch. It has created numerous major franchises, including Mario, Donkey Kong, The Legend of Zelda, Metroid, Fire Emblem, Kirby, Star Fox, Pokémon, Super Smash Bros., Animal Crossing, Xenoblade Chronicles, and Splatoon.
+                  </p>
+                  <p class="fs-5 lh-lg text-dark">
+                    Nintendo's mascot, Mario, is internationally recognized. The company has sold more than 5.592 billion video games and over 836 million hardware units globally, as of March 2023. It is considered that Hiroshi Yamauchi's strategic decisions, mainly to take Nintendo into the world of electronic games, ensured not only the success of his company, but the survival of the industry as a whole.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-danger h-100">
+                    <div class="card-body p-4 text-center">
+                      <h4 class="h5 text-danger mb-3 fw-bold">
+                        <i class="fas fa-trophy me-2"></i>Nintendo Switch Models
+                      </h4>
+                      <ul class="list-unstyled text-dark lh-lg">
+                        <li><strong>Nintendo Switch</strong> - Original</li>
+                        <li><strong>Switch Lite</strong> - Portable</li>
+                        <li><strong>Switch OLED</strong> - Enhanced</li>
+                        <li><strong>Special Editions</strong> - Themed</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+              <form method="post" action="{{ url_for('add_to_cart') }}" class="d-inline">
+                <input type="hidden" name="product" value="Nintendo Switch">
+                <input type="hidden" name="price_cents" value="259900">
+                <button type="submit" class="btn btn-danger btn-lg px-5 py-3" onclick="if(!{{ 'true' if session.get('user_id') else 'false' }}){alert('Please log in to add to cart.'); return false;}">
+                  <i class="fas fa-shopping-cart me-2"></i>Add Nintendo Switch to Cart - $259.99
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+

@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <!-- Hero Image Section -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <img src="{{ url_for('image_static', filename='valobackground.gif') }}" class="img-fluid rounded shadow-lg" alt="Valorant" style="max-height: 400px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+          <div class="card-body p-5">
+            <!-- Main Title Section -->
+            <div class="text-center mb-5">
+              <h1 class="display-4 fw-bold text-primary mb-3">FPS At Its Best</h1>
+              <p class="lead text-muted fs-4">Inspired by CS:GO, made by Riot Games</p>
+              <hr class="my-4" style="border-color: #0d6efd; border-width: 2px;">
+            </div>
+
+            <!-- Game Description -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">About Valorant</h2>
+              <p class="fs-5 lh-lg text-dark mb-4">
+                Valorant (stylized as <strong>VALORANT</strong>) is a free-to-play first-person tactical hero shooter developed and published by Riot Games, for Windows. Teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by a release on June 2, 2020.
+              </p>
+              <p class="fs-5 lh-lg text-dark">
+                The development of the game started in 2014. Valorant takes inspiration from the Counter-Strike series of tactical shooters, borrowing several mechanics such as the buy menu, spray patterns, and inaccuracy while moving.
+              </p>
+            </div>
+
+            <!-- Game Modes Section -->
+            <div class="row">
+              <div class="col-lg-6 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="card-body p-4 text-white">
+                    <h3 class="h4 mb-3 fw-bold">Spike Rush</h3>
+                    <p class="mb-0 lh-lg">
+                      In the Spike Rush mode, the match is played as best of 7 rounds - the first team to win 4 rounds wins the match. Players begin the round with all abilities fully charged except their ultimate, which charges twice as fast as in standard games.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <div class="card-body p-4 text-white">
+                    <h3 class="h4 mb-3 fw-bold">Game Features</h3>
+                    <ul class="list-unstyled mb-0 lh-lg">
+                      <li><i class="fas fa-check me-2"></i>All players on the attacking team carry a spike</li>
+                      <li><i class="fas fa-check me-2"></i>Guns are randomized in every round</li>
+                      <li><i class="fas fa-check me-2"></i>Ultimate point orbs present</li>
+                      <li><i class="fas fa-check me-2"></i>Multiple power-up orbs</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+              <a href="https://playvalorant.com" class="btn btn-primary btn-lg px-5 py-3" target="_blank" rel="noopener">
+                <i class="fas fa-gamepad me-2"></i>Play Valorant Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+

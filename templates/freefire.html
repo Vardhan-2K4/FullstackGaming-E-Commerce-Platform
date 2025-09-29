@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <!-- Hero Image Section -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <img src="{{ url_for('image_static', filename='ffbackground.gif') }}" class="img-fluid rounded shadow-lg" alt="Free Fire" style="max-height: 400px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+          <div class="card-body p-5">
+            <!-- Main Title Section -->
+            <div class="text-center mb-5">
+              <h1 class="display-4 fw-bold text-warning mb-3">The Run In Any Device Game</h1>
+              <p class="lead text-muted fs-4">Optimization At It's Peak</p>
+              <hr class="my-4" style="border-color: #ffc107; border-width: 2px;">
+            </div>
+
+            <!-- Game Description -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">About Free Fire</h2>
+              <p class="fs-5 lh-lg text-dark mb-4">
+                Free Fire offers over <strong>15 game modes</strong>, including Team Deathmatch, Clash Squad, Big Head, Explosive Jump, Cold Steel, Rampage, and Pet Mania. However, modes other than Battle Royale, Clash Squad, and Lone Wolf are only available during special events.
+              </p>
+              <p class="fs-5 lh-lg text-dark">
+                The Battle Royale mode in Free Fire accommodates up to <strong>52 players</strong> landing on an island without weapons. They must fight to be the last one standing by scavenging weapons and equipment from buildings.
+              </p>
+            </div>
+
+            <!-- Game Features -->
+            <div class="row mb-5">
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-map fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">6 Unique Maps</h4>
+                    <p class="mb-0">Bermuda, Bermuda Remastered, Kalahari, Purgatory, Alpine, and NeXTerra</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Multiple Play Modes</h4>
+                    <p class="mb-0">Solo, Duo, or Squad play with ranked mode affecting your ranking</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Mobile Optimized</h4>
+                    <p class="mb-0">Runs smoothly on any device with peak optimization</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Character System -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">Character System</h2>
+              <div class="row">
+                <div class="col-lg-8">
+                  <p class="fs-5 lh-lg text-dark mb-4">
+                    Free Fire features a character system of <strong>50+ characters</strong>. Each character has a unique skill which can be active or passive. Active skills can be triggered manually by an in-game button and passive skills are triggered automatically.
+                  </p>
+                  <p class="fs-5 lh-lg text-dark">
+                    Each character can equip 4 skills including the character's skill and 3 skills from other characters. Free Fire characters have unique backstories and some were inspired by real-life celebrities.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-warning h-100">
+                    <div class="card-body p-4 text-center">
+                      <h4 class="h5 text-warning mb-3 fw-bold">
+                        <i class="fas fa-star me-2"></i>Celebrity Collaborations
+                      </h4>
+                      <ul class="list-unstyled text-dark lh-lg">
+                        <li><strong>Cristiano Ronaldo</strong> - Chrono</li>
+                        <li><strong>DJ Alok</strong> - Alok</li>
+                        <li><strong>Justin Bieber</strong> - JBeibs</li>
+                        <li><strong>Anitta</strong> - A-Patroa</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+              <a href="https://ff.garena.com" class="btn btn-warning btn-lg px-5 py-3" target="_blank" rel="noopener">
+                <i class="fas fa-download me-2"></i>Download Free Fire
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+

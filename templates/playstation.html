@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <!-- Hero Image Section -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <img src="{{ url_for('image_static', filename='pslogo2.gif') }}" class="img-fluid rounded shadow-lg" alt="PlayStation" style="max-height: 400px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+          <div class="card-body p-5">
+            <!-- Main Title Section -->
+            <div class="text-center mb-5">
+              <h1 class="display-4 fw-bold text-primary mb-3">PlayStation</h1>
+              <p class="lead text-muted fs-4">A Dream of Everyone</p>
+              <hr class="my-4" style="border-color: #0d6efd; border-width: 2px;">
+            </div>
+
+            <!-- Game Description -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">About PlayStation</h2>
+              <p class="fs-5 lh-lg text-dark mb-4">
+                PlayStation (Japanese: プレイステーション, Hepburn: Pureisutēshon, officially abbreviated as PS) is a video gaming brand that consists of five home video game consoles, two handhelds, a media center, and a smartphone, as well as an online service and multiple magazines. The brand is produced by Sony Interactive Entertainment, a division of Sony.
+              </p>
+              <p class="fs-5 lh-lg text-dark">
+                The first PlayStation console was released in Japan in December 1994, and worldwide the following year. The original console in the series was the first console of any type to ship over 100 million units, doing so in under a decade.
+              </p>
+            </div>
+
+            <!-- Console Generations -->
+            <div class="row mb-5">
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-gamepad fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">PlayStation 2</h4>
+                    <p class="mb-0">Best-selling home console with over 155 million units sold by 2012</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-tv fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">PlayStation 4</h4>
+                    <p class="mb-0">Fastest selling console in history, selling a million units within a day</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-rocket fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">PlayStation 5</h4>
+                    <p class="mb-0">Latest console, sold 10 million units in its first 249 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PlayStation vs Xbox -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">PlayStation vs Xbox</h2>
+              <div class="row">
+                <div class="col-lg-8">
+                  <p class="fs-5 lh-lg text-dark mb-4">
+                    Although everything looks similar, the heart is different for both Xbox and PlayStation. PlayStation is designed by Sony Entertainment, while Xbox is designed and owned by Microsoft Corporation.
+                  </p>
+                  <p class="fs-5 lh-lg text-dark">
+                    If you are Indian, buy the PlayStation - it's best for you. At this point, a good while after its release, we think there's only one answer for which Sony console to go for - the PS5. It's by far the more future-proof choice and has more games than ever to enjoy on its upgraded hardware.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-primary h-100">
+                    <div class="card-body p-4 text-center">
+                      <h4 class="h5 text-primary mb-3 fw-bold">
+                        <i class="fas fa-star me-2"></i>Console Generations
+                      </h4>
+                      <ul class="list-unstyled text-dark lh-lg">
+                        <li><strong>PS1</strong> - 1994</li>
+                        <li><strong>PS2</strong> - 2000</li>
+                        <li><strong>PS3</strong> - 2006</li>
+                        <li><strong>PS4</strong> - 2013</li>
+                        <li><strong>PS5</strong> - 2020</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+              <form method="post" action="{{ url_for('add_to_cart') }}" class="d-inline">
+                <input type="hidden" name="product" value="PlayStation 5">
+                <input type="hidden" name="price_cents" value="499900">
+                <button type="submit" class="btn btn-primary btn-lg px-5 py-3" onclick="if(!{{ 'true' if session.get('user_id') else 'false' }}){alert('Please log in to add to cart.'); return false;}">
+                  <i class="fas fa-shopping-cart me-2"></i>Add PlayStation 5 to Cart - $499.99
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+

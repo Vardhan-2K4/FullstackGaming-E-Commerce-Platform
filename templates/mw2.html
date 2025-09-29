@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <!-- Hero Image Section -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="text-center">
+          <img src="{{ url_for('image_static', filename='mw2background.gif') }}" class="img-fluid rounded shadow-lg" alt="Modern Warfare 2" style="max-height: 400px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Card -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
+          <div class="card-body p-5">
+            <!-- Main Title Section -->
+            <div class="text-center mb-5">
+              <h1 class="display-4 fw-bold text-danger mb-3">The Ghost</h1>
+              <p class="lead text-muted fs-4">If You Don't Like It, You Are Not A Man</p>
+              <hr class="my-4" style="border-color: #dc3545; border-width: 2px;">
+            </div>
+
+            <!-- Game Description -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">About Modern Warfare 2</h2>
+              <p class="fs-5 lh-lg text-dark mb-4">
+                Call of Duty: Modern Warfare 2 is a 2009 first-person shooter game developed by Infinity Ward and published by Activision. It is the sixth installment in the Call of Duty series and the direct sequel to Call of Duty 4: Modern Warfare. It was released worldwide on November 10, 2009, for Windows, PlayStation 3, and Xbox 360.
+              </p>
+              <p class="fs-5 lh-lg text-dark">
+                A separate version for the Nintendo DS, titled Modern Warfare: Mobilized, was also released on the same day. A version for OS X was developed by Aspyr and released in May 2014, and the Xbox 360 version was made backward compatible for the Xbox One in 2018.
+              </p>
+            </div>
+
+            <!-- Game Features -->
+            <div class="row mb-5">
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-crosshairs fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">First-Person Shooter</h4>
+                    <p class="mb-0">Fast-paced gunfights with realistic weapon mechanics and tactical gameplay</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-shield-alt fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Health System</h4>
+                    <p class="mb-0">Dynamic health recovery system with visual damage indicators</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card h-100 border-0" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                  <div class="card-body p-4 text-white text-center">
+                    <i class="fas fa-bomb fa-3x mb-3"></i>
+                    <h4 class="h5 mb-3 fw-bold">Weapon Arsenal</h4>
+                    <p class="mb-0">Extensive weapon collection with attachments and special equipment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gameplay Section -->
+            <div class="mb-5">
+              <h2 class="h3 mb-4 text-dark fw-bold">Gameplay Features</h2>
+              <div class="row">
+                <div class="col-lg-8">
+                  <p class="fs-5 lh-lg text-dark mb-4">
+                    The player controls a soldier who can perform several actions, including jump, sprint, crouch, lay prone, and aim down their gun's iron sights. When the player is shot by an enemy, blood will splatter their heads-up display (HUD), denoting that they have taken damage.
+                  </p>
+                  <p class="fs-5 lh-lg text-dark">
+                    The HUD displays other information, such as a compass, a mini-map, and the player's current ammunition count. The game features traditional guns, including assault rifles, shotguns, handguns, and sniper rifles with various attachments like suppressors and heartbeat sensors.
+                  </p>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card border-danger h-100">
+                    <div class="card-body p-4 text-center">
+                      <h4 class="h5 text-danger mb-3 fw-bold">
+                        <i class="fas fa-gamepad me-2"></i>Special Equipment
+                      </h4>
+                      <ul class="list-unstyled text-dark lh-lg">
+                        <li><strong>Grenades & Flashbangs</strong></li>
+                        <li><strong>Night Vision Goggles</strong></li>
+                        <li><strong>Laser Designator</strong></li>
+                        <li><strong>Close Combat Knife</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+              <a href="https://www.callofduty.com/modernwarfare2" class="btn btn-danger btn-lg px-5 py-3" target="_blank" rel="noopener">
+                <i class="fas fa-play me-2"></i>Play Modern Warfare 2
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
