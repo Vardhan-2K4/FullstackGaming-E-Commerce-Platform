@@ -1,0 +1,506 @@
+/* Override Bootstrap and ensure button visibility */
+.card-title { color: #212529; }
+
+/* Force button visibility with maximum specificity */
+.card .card-body .mt-auto .btn,
+.card .card-body .btn,
+.card .btn,
+.btn-outline-primary,
+.btn-outline-secondary {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999 !important;
+  position: relative !important;
+  pointer-events: auto !important;
+  margin: 5px !important;
+  padding: 8px 16px !important;
+  border: 2px solid !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0d6efd !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline-primary {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-outline-secondary {
+  color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+.card { 
+  position: relative; 
+  overflow: visible !important; 
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.card .card-body { 
+  display: flex; 
+  flex-direction: column; 
+  position: relative;
+  z-index: 5;
+  background-color: transparent !important;
+}
+
+.row.g-4 { row-gap: 1.5rem; }
+.mb-5 { margin-bottom: 3rem !important; }
+
+/* Ensure section backgrounds don't overlap content buttons */
+section { 
+  position: relative; 
+  z-index: 1; 
+  clear: both; 
+}
+.card { 
+  position: relative; 
+  z-index: 10; 
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.card * { 
+  position: relative; 
+  z-index: 15; 
+}
+.navbar-brand { font-weight: 600; }
+.fixed-top + main { padding-top: 4rem; }
+
+/* Global background image fixed while scrolling */
+body {
+  background: url('/images/backgroundimg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure main content takes up available space */
+main {
+  flex: 1;
+}
+
+/* Sticky footer positioning */
+footer {
+  margin-top: auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  backdrop-filter: blur(5px) !important;
+  border-top: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+footer small {
+  color: #6c757d !important;
+  font-weight: 500 !important;
+}
+
+/* Align Find out more buttons and provide lime hover */
+.card .card-body.d-flex { min-height: 100%; }
+.btn:hover,
+.btn:focus {
+  background-color: #32CD32 !important; /* lime green */
+  border-color: #32CD32 !important;
+  color: #000 !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+  color: #000 !important;
+}
+
+/* Lime hero-matching cards */
+.bg-lime {
+  background-color: #32CD32 !important;
+  color: #000 !important;
+}
+.bg-lime .card-title,
+.bg-lime .card-text { color: #000 !important; }
+
+/* Ensure blog section buttons are visible with maximum specificity */
+#blog .card .card-body .mt-auto .btn,
+#blog .card .card-body .btn,
+#blog .btn,
+#blog form button,
+#blog .d-flex .btn {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999 !important;
+  position: relative !important;
+  pointer-events: auto !important;
+  margin: 5px !important;
+  padding: 8px 16px !important;
+  border: 2px solid !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #6c757d !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Fix form buttons in blog section */
+#blog form {
+  display: inline-block !important;
+  visibility: visible !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#blog form button {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 999 !important;
+  position: relative !important;
+  cursor: pointer !important;
+}
+
+/* Additional button visibility fixes */
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mt-auto .btn {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 30 !important;
+  position: relative !important;
+  margin-top: 10px !important;
+}
+
+/* Ensure all buttons have proper contrast */
+.btn-outline-primary,
+.btn-outline-secondary {
+  border: 2px solid currentColor !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(5px);
+}
+
+/* SPECIFIC FIXES FOR GAME CARDS AND BLOG BUTTONS */
+
+/* Game card buttons - ensure they are visible and properly positioned */
+.card .card-body .mt-auto {
+  margin-top: auto !important;
+  padding-top: 15px !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 0 0 8px 8px !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.card .card-body .mt-auto .btn {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 101 !important;
+  position: relative !important;
+  background-color: #0d6efd !important;
+  color: white !important;
+  border: 2px solid #0d6efd !important;
+  padding: 10px 20px !important;
+  margin: 5px 0 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Blog section - fix overlap and positioning */
+#blog {
+  position: relative !important;
+  z-index: 10 !important;
+  margin-bottom: 6rem !important;
+  padding: 30px !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+  margin-top: 40px !important;
+  clear: both !important;
+  overflow: visible !important;
+  min-height: auto !important;
+  height: auto !important;
+}
+
+#blog h2 {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #212529 !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+  text-align: left !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  padding: 10px 15px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+#blog .card {
+  position: relative !important;
+  z-index: 60 !important;
+  margin-bottom: 15px !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+#blog .card .card-body {
+  position: relative !important;
+  z-index: 70 !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+}
+
+#blog .card .card-body .mt-auto {
+  margin-top: auto !important;
+  padding-top: 15px !important;
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  border-radius: 0 0 8px 8px !important;
+  position: relative !important;
+  z-index: 80 !important;
+}
+
+#blog .btn,
+#blog form button {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 350 !important;
+  position: relative !important;
+  background-color: #6c757d !important;
+  color: white !important;
+  border: 2px solid #6c757d !important;
+  padding: 10px 20px !important;
+  margin: 8px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+#blog .btn:hover,
+#blog form button:hover {
+  background-color: #5a6268 !important;
+  border-color: #5a6268 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3) !important;
+}
+
+/* Ensure blog section has proper spacing and doesn't get overlapped */
+#blog .card .card-body .mt-auto {
+  margin-top: auto !important;
+  padding-top: 15px !important;
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  border-radius: 0 0 8px 8px !important;
+  position: relative !important;
+  z-index: 240 !important;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  margin-bottom: -20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+/* Contact form section - ensure it doesn't overlap blog */
+section:last-of-type {
+  position: relative !important;
+  z-index: 1 !important;
+  margin-top: 5rem !important;
+  clear: both !important;
+  padding-top: 3rem !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+  margin-bottom: 40px !important;
+  overflow: visible !important;
+}
+
+/* Remove excessive margins and padding from all sections */
+section {
+  margin-bottom: 20px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Remove empty space between sections */
+.mb-5 {
+  margin-bottom: 20px !important;
+}
+
+/* Ensure proper spacing between blog and contact */
+#blog + section {
+  margin-top: 5rem !important;
+  padding-top: 3rem !important;
+  clear: both !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Remove any excessive height from blog section */
+#blog .row {
+  margin-bottom: 0 !important;
+}
+
+#blog .row .col-md-6 {
+  margin-bottom: 15px !important;
+}
+
+/* Ensure blog section doesn't have excessive height */
+#blog {
+  min-height: auto !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Game cards section - fix button positioning */
+section:nth-of-type(2) {
+  position: relative !important;
+  z-index: 40 !important;
+  margin-bottom: 20px !important;
+  overflow: visible !important;
+}
+
+/* Game card clickable links */
+.game-card-link {
+  display: block !important;
+  text-decoration: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  border-radius: 8px 8px 0 0 !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.game-card-link:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+  text-decoration: none !important;
+}
+
+.game-card-link img {
+  display: block !important;
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.game-card-link:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* Ensure card images are always visible */
+.card-img-top {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* Force all game card images to be visible - SIMPLE OVERRIDE */
+section:nth-of-type(2) img,
+section:nth-of-type(2) .card-img-top,
+section:nth-of-type(2) .game-card-link img,
+.card-img-top,
+img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  position: relative !important;
+  z-index: 999 !important;
+  background-color: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+section:nth-of-type(2) .card {
+  position: relative !important;
+  z-index: 45 !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  margin-bottom: 20px !important;
+  height: auto !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: visible !important;
+}
+
+/* Ensure game card images are not hidden by any parent elements */
+section:nth-of-type(2) .card * {
+  position: relative !important;
+  z-index: auto !important;
+}
+
+section:nth-of-type(2) .card .game-card-link {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+section:nth-of-type(2) .card .card-body {
+  position: relative !important;
+  z-index: 46 !important;
+  background-color: transparent !important;
+  padding: 20px !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Fix game card buttons to stay within cards */
+section:nth-of-type(2) .card .card-body .mt-auto {
+  margin-top: auto !important;
+  padding-top: 15px !important;
+  background-color: rgba(248, 249, 250, 0.95) !important;
+  border-radius: 0 0 8px 8px !important;
+  position: relative !important;
+  z-index: 100 !important;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  margin-bottom: -20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+section:nth-of-type(2) .card .card-body .mt-auto .btn {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 101 !important;
+  position: relative !important;
+  background-color: #0d6efd !important;
+  color: white !important;
+  border: 2px solid #0d6efd !important;
+  padding: 10px 20px !important;
+  margin: 5px 0 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  width: auto !important;
+  min-width: 120px !important;
+}
+

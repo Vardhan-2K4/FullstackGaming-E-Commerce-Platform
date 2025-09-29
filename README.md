@@ -1,210 +1,201 @@
-# 🎮 Gaming Central - Frontend Website
+# V L V 道場 - Gaming E-Commerce Platform
 
-A comprehensive gaming website featuring dedicated pages for popular games including BGMI, Free Fire, GTA 5, Modern Warfare 2, Valorant, and more. Built with modern web technologies to provide an engaging experience for gaming enthusiasts.
+## Description
+A comprehensive gaming-themed e-commerce platform built with Flask that features user authentication, shopping cart functionality, order management, and multiple gaming content sections. The platform showcases various gaming titles including BGMI, Free Fire, GTA 5, Call of Duty: Modern Warfare 2, Valorant, and more.
 
-## 🌟 Features
+## Features
+- **User Authentication**: Registration, login, logout with secure password hashing
+- **Shopping Cart**: Add/remove items, quantity management
+- **Order Management**: Complete checkout process with order history
+- **Gaming Content**: Dedicated pages for popular games
+- **Responsive Design**: Modern UI with Bootstrap components
+- **Database Integration**: SQLite database with proper relationships
+- **Session Management**: Secure user sessions
+- **Form Validation**: Client and server-side validation
 
-- **Individual Game Pages**: Dedicated sections for popular games like BGMI, Free Fire, GTA 5, Modern Warfare 2, and Valorant
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Navigation**: Custom sidebar layouts for different game sections
-- **Rich Media Content**: High-quality images and game assets
-- **Clean UI/UX**: Modern design focused on user experience
-- **Fast Loading**: Optimized performance for quick page loads
+## Technologies Used
+- **Backend**: Flask (Python)
+- **Database**: SQLite with SQLAlchemy-style ORM
+- **Frontend**: HTML5, CSS3, JavaScript, jQuery
+- **UI Framework**: Bootstrap 5
+- **Security**: Werkzeug password hashing
+- **Templates**: Jinja2 templating engine
+- **Static Assets**: FontAwesome icons, custom CSS/JS
 
-## 🛠️ Technology Stack
+## Project Structure
+```
+D:/Projecy/
+├── app.py                          # Main Flask application
+├── instance/
+│   └── db.sqlite                   # SQLite database
+├── templates/                     # Jinja2 templates
+│   ├── base.html                  # Base template
+│   ├── index.html                 # Home page
+│   ├── login.html                 # Login page
+│   ├── register.html              # Registration page
+│   ├── profile.html               # User profile
+│   ├── cart.html                  # Shopping cart
+│   ├── checkout.html              # Checkout page
+│   ├── success.html               # Success page
+│   ├── bgmi.html                  # BGMI game page
+│   ├── freefire.html              # Free Fire game page
+│   ├── gta5.html                  # GTA 5 game page
+│   ├── mw2.html                   # Modern Warfare 2 page
+│   ├── valorant.html              # Valorant game page
+│   ├── triology.html              # GTA Trilogy page
+│   ├── playstation.html           # PlayStation page
+│   ├── nintendo.html              # Nintendo page
+│   └── origin.html                # Origin page
+├── static/                        # Static assets
+│   ├── css/
+│   │   └── custom.css             # Custom styles
+│   └── js/
+│       └── form.js                # Form validation
+├── assets/                        # Additional assets
+│   ├── css/                       # CSS files
+│   ├── js/                        # JavaScript files
+│   └── webfonts/                  # Font files
+└── images/                        # Game images and assets
+```
 
-- **HTML5** (63.8%) - Semantic markup and structure
-- **CSS3** (28.5%) - Styling, animations, and responsive design
-- **JavaScript** (7.7%) - Interactive functionality and dynamic content
-- **Git** - Version control and collaboration
+## Database Schema
+The application uses SQLite with the following tables:
+- **user**: User accounts with username, email, and hashed passwords
+- **cart**: Shopping cart items for each user
+- **orders**: Order records with payment and shipping information
+- **order_items**: Individual items within each order
+- **comment**: User comments system
 
-## 🚀 Getting Started
+## Setup Instructions
 
 ### Prerequisites
+- Python 3.7 or higher
+- pip (Python package installer)
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Basic text editor (VS Code recommended)
-- Git (for cloning and version control)
-
-### Installation & Setup
-
+### Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Vardhan-2K4/Front_end_website.git
-   cd Front_end_website
+   git clone <repository-url>
+   cd Projecy
    ```
 
-2. **Open the project**
+2. **Create and activate a virtual environment**
    ```bash
-   # Open in VS Code
-   code .
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
    
-   # Or open index.html in your browser
-   open index.html
+   # macOS/Linux
+   python -m venv .venv
+   source .venv/bin/activate
    ```
 
-3. **Start a local server (optional)**
+3. **Install dependencies**
    ```bash
-   # Using Python 3
-   python -m http.server 8000
-   
-   # Using Node.js (if you have http-server installed)
-   npx http-server
+   pip install flask werkzeug
    ```
 
-4. **Access the website**
-   - Direct file access: Open `index.html` in your browser
-   - Local server: Navigate to `http://localhost:8000`
-
-## 📁 Project Structure
-
-```
-Front_end_website/
-├── index.html              # Main landing page
-├── bgmi.html              # BGMI game page
-├── freefire.html          # Free Fire game page
-├── gta5.html              # GTA 5 game page
-├── modern-warfare2.html   # Modern Warfare 2 page
-├── valorant.html          # Valorant game page
-├── assets/                # Static assets
-│   ├── css/              # Stylesheets
-│   ├── js/               # JavaScript files
-│   └── images/           # Game images and graphics
-├── sidebar-bgmi.html     # BGMI sidebar layout
-├── sidebar-freefire.html # Free Fire sidebar layout
-└── README.md             # Project documentation
-```
-
-## 🎯 Game Pages
-
-### **Available Games**
-- **🔫 BGMI (Battlegrounds Mobile India)** - Battle royale gaming content
-- **🔥 Free Fire** - Popular mobile battle royale game
-- **🚗 GTA 5** - Open-world action-adventure game
-- **⚔️ Modern Warfare 2** - First-person shooter game
-- **🎯 Valorant** - Tactical shooter game
-
-Each game page includes:
-- Detailed game information
-- High-quality visuals
-- Game-specific styling
-- Custom navigation elements
-
-## 🎨 Customization
-
-### **Adding New Games**
-1. Create a new HTML file (e.g., `newgame.html`)
-2. Add corresponding CSS styles in the assets folder
-3. Include game assets in the images directory
-4. Update navigation links in existing pages
-
-### **Styling Modifications**
-- Main styles: Located in `assets/css/`
-- Game-specific styles: Individual CSS files for each game
-- Responsive breakpoints: Defined in media queries
-
-### **Content Updates**
-- Game information: Edit respective HTML files
-- Images: Replace files in `assets/images/`
-- Navigation: Update sidebar HTML files
-
-## 🔧 Development
-
-### **Best Practices**
-- Use semantic HTML elements
-- Maintain consistent CSS naming conventions
-- Optimize images for web performance
-- Test across different browsers and devices
-- Keep code organized and well-commented
-
-### **Performance Optimization**
-- Compress images before adding to assets
-- Minify CSS and JavaScript for production
-- Use efficient CSS selectors
-- Implement lazy loading for images
-
-## 📱 Responsive Design
-
-The website is designed to work seamlessly across:
-- **Desktop** (1200px+)
-- **Tablet** (768px - 1199px)
-- **Mobile** (320px - 767px)
-
-Key responsive features:
-- Flexible grid layouts
-- Scalable typography
-- Touch-friendly navigation
-- Optimized images for different screen sizes
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch**
+4. **Run the application**
    ```bash
-   git checkout -b feature/new-game-page
+   python app.py
    ```
-3. **Make your changes**
-   - Add new game pages
-   - Improve existing functionality
-   - Fix bugs or issues
-4. **Commit your changes**
-   ```bash
-   git commit -m "Add new game page for [Game Name]"
-   ```
-5. **Push to your branch**
-   ```bash
-   git push origin feature/new-game-page
-   ```
-6. **Create a Pull Request**
 
-### **Contribution Guidelines**
-- Follow existing code style and structure
-- Test changes across different browsers
-- Ensure responsive design compatibility
-- Add appropriate comments to your code
-- Update documentation if needed
+5. **Access the application**
+   Open your browser and navigate to `http://localhost:5000`
 
-## 🐛 Issues & Support
+## API Endpoints
 
-Found a bug or have a suggestion? 
+### Authentication
+- `GET /login` - Login page
+- `POST /login` - User login
+- `GET /register` - Registration page
+- `POST /register` - User registration
+- `GET /logout` - User logout
 
-- **Report Issues**: [Create an issue](https://github.com/Vardhan-2K4/Front_end_website/issues)
-- **Feature Requests**: Use the issue tracker with the "enhancement" label
-- **Questions**: Open a discussion in the repository
+### Main Pages
+- `GET /` - Home page
+- `GET /profile` - User profile (requires authentication)
+- `GET /cart` - Shopping cart (requires authentication)
+- `GET /checkout` - Checkout page (requires authentication)
 
-## 🗺️ Future Enhancements
+### Gaming Content
+- `GET /bgmi` - BGMI game page
+- `GET /freefire` - Free Fire game page
+- `GET /gta5` - GTA 5 game page
+- `GET /mw2` - Modern Warfare 2 page
+- `GET /valorant` - Valorant game page
+- `GET /triology` - GTA Trilogy page
+- `GET /playstation` - PlayStation page
+- `GET /nintendo` - Nintendo page
+- `GET /origin` - Origin page
 
-**Planned Features:**
-- [ ] Search functionality for games
-- [ ] User reviews and ratings system
-- [ ] News and updates section
-- [ ] Game comparison tools
-- [ ] Social sharing capabilities
-- [ ] Dark/Light theme toggle
-- [ ] Game trailers and videos
-- [ ] Mobile app version
+### E-Commerce
+- `POST /add_to_cart` - Add item to cart
+- `POST /purchase` - Legacy purchase route
+- `POST /remove_from_cart/<item_id>` - Remove item from cart
+- `POST /checkout` - Process checkout
 
-## 📄 License
+### Other
+- `POST /submit` - Contact form submission
+- `GET /success` - Success page
+- `POST /comment` - Add comment
+- `GET /images/<filename>` - Serve images
 
-This project is open source and available under the [MIT License](LICENSE).
+## Usage
 
-## 🙏 Acknowledgments
+### User Registration and Login
+1. Navigate to the registration page
+2. Fill in username, email, and password
+3. Login with your credentials
 
-- Gaming community for inspiration and feedback
-- Open source contributors and developers
-- Game publishers for official assets and information
-- Web development community for best practices and guidance
+### Shopping Experience
+1. Browse gaming content pages
+2. Add items to cart
+3. View cart and manage quantities
+4. Proceed to checkout
+5. View order history in profile
 
-## 📞 Contact
+### Content Management
+- Each gaming page showcases specific games
+- Users can add gaming items to cart
+- Comments system for user engagement
 
-**Developer**: Vardhan  
-**GitHub**: [@Vardhan-2K4](https://github.com/Vardhan-2K4)  
-**Repository**: [Front_end_website](https://github.com/Vardhan-2K4/Front_end_website)
+## Security Features
+- Password hashing using Werkzeug
+- Session management
+- SQL injection protection
+- Input validation and sanitization
 
-***
+## Development
 
-**Made with ❤️ for gaming enthusiasts**
+### Running in Development Mode
+The application runs with debug mode enabled by default, which includes:
+- Auto-reload on code changes
+- Detailed error messages
+- Browser auto-opening
 
-*Level up your gaming experience! 🎮*
+### Database Management
+The database is automatically created and initialized when the application starts. Tables are created if they don't exist.
+
+## Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+This project is open source and available under the MIT License.
+
+## Support
+For support and questions, please open an issue in the repository.
+
+## Screenshots
+Add screenshots of your application here:
+- Home page
+- Login/Registration pages
+- Gaming content pages
+- Shopping cart
+- User profile
+- Checkout process
+
