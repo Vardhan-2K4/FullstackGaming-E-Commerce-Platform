@@ -87,6 +87,15 @@ def register():
             <input type="submit" value="Register">
         </form>
     '''
+@app.route('/games/valorant')
+def valorant_page():
+    """Serves the content page for Valorant."""
+    return render_template('valorant.html')
+
+@app.route('/games/gta-trilogy')
+def gta_trilogy_page():
+    """Serves the content page for GTA Trilogy."""
+    return render_template('gta_trilogy.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
