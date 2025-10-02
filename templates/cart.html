@@ -94,14 +94,5 @@
   </div>
 </section>
 
-{% if items %}
-        <h3>Total: ₹{{ "%.2f"|format(total) }}</h3>
-        <hr>
-        <form action="{{ url_for('checkout') }}" method="post">
-            <button type="submit" style="font-size: 1.2em;">Proceed to Checkout</button>
-        </form>
-    {% endif %}
-</body>
-</html>
 {% endblock %}
 
