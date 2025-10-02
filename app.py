@@ -97,5 +97,65 @@ def gta_trilogy_page():
     """Serves the content page for GTA Trilogy."""
     return render_template('gta_trilogy.html')
 
+
+@app.route('/checkout', methods=['POST'])
+def checkout():
+    """
+    Finalizes the purchase. Creates an order, saves the items,
+    and clears the user's cart.
+    """
+    if 'user_id' not in session:
+        return redirect(url_for('login'))
+
+    user_id = session['user_id']
+    db = get_db()
+
+    # Step 1: Fetch all cart items to process the order
+    cart_items = db.execute('''
+        SELECT p.id, p.price, c.quantity
+        FROM cart c JOIN products p ON c.product_id = p.id
+        WHERE c.user_id = ?
+    ''', (user_id,)).fetchall()
+
+    if not cart_items:
+        flash('Your cart is empty. Cannot proceed to checkout.', 'warning')
+        return redirect(url_for('view_cart'))
+
+    # Step 2: Calculate the total price
+    total_price = sum(item['price'] * item['quantity'] for item in cart_items)
+
+    try:
+        # Step 3: Create a new entry in the 'orders' table
+        cursor = db.cursor()
+        cursor.execute(
+            'INSERT INTO orders (user_id, total_price) VALUES (?, ?)',
+            (user_id, total_price)
+        )
+        # Get the ID of the order we just created
+        new_order_id = cursor.lastrowid
+
+        # Step 4: Add each cart item to the 'order_items' table
+        for item in cart_items:
+            db.execute('''
+                INSERT INTO order_items (order_id, product_id, quantity, price_per_unit)
+                VALUES (?, ?, ?, ?)
+            ''', (new_order_id, item['id'], item['quantity'], item['price']))
+
+        # Step 5: Clear the user's shopping cart
+        db.execute('DELETE FROM cart WHERE user_id = ?', (user_id,))
+
+        # Step 6: Commit all changes to the database
+        db.commit()
+        flash('Thank you for your order!', 'success')
+    except Exception as e:
+        db.rollback() # Rollback changes if any step fails
+        flash(f'An error occurred during checkout: {e}', 'danger')
+    finally:
+        db.close()
+
+    # Redirect to the new profile page to see order history
+    return redirect(url_for('user_profile'))
+
+
 if __name__ == '__main__':
     app.run(debug=True)
