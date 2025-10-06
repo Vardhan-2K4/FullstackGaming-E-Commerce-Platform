@@ -110,45 +110,6 @@
   </div>
 </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Your Profile</title>
-</head>
-<body>
-    <h1>Welcome, {{ username }}!</h1>
-    <a href="/">Home</a> | <a href="/logout">Logout</a>
-    <hr>
-    
-    <h2>Your Order History</h2>
-    
-    {% if not orders %}
-        <p>You have not placed any orders yet.</p>
-    {% else %}
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Order Date</th>
-                    <th>Total Price</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for order in orders %}
-                <tr>
-                    <td>#{{ order.id }}</td>
-                    <td>{{ order.order_date }}</td>
-                    <td>₹{{ "%.2f"|format(order.total_price) }}</td>
-                    <td>{{ order.status }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    {% endif %}
-</body>
-</html>
 {% endblock %}
 
 
