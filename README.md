@@ -203,6 +203,8 @@ Add screenshots of your application here:
   <img width="2531" height="1484" alt="image" src="https://github.com/user-attachments/assets/17a618c8-918f-4d29-a427-6fc3ae1ad7e4" />
 - User profile
   <img width="2559" height="1499" alt="image" src="https://github.com/user-attachments/assets/5b5e8995-b8d8-40a7-b92a-3ceb653385cd" />
+  <img width="2559" height="1494" alt="image" src="https://github.com/user-attachments/assets/805e9aaf-2885-496c-a9e0-3d7f426d50eb" />
+
 - Checkout process
    <img width="2558" height="1476" alt="image" src="https://github.com/user-attachments/assets/7644cf0b-32b2-46f9-bbb1-34c9c6a8adbb" />
    <img width="2544" height="1490" alt="image" src="https://github.com/user-attachments/assets/91280a9e-0d0d-4e89-b992-6ad9e3fd6f75" />
