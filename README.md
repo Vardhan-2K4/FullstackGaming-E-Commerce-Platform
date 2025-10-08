@@ -184,8 +184,6 @@ The database is automatically created and initialized when the application start
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-This project is open source and available under the MIT License.
 
 ## Support
 For support and questions, please open an issue in the repository.
@@ -193,9 +191,17 @@ For support and questions, please open an issue in the repository.
 ## Screenshots
 Add screenshots of your application here:
 - Home page
+   <img width="2502" height="1484" alt="Screenshot 2025-10-08 132838" src="https://github.com/user-attachments/assets/b955bf79-f871-47d4-a70e-57af7a1f33cf" />
+  <img width="2559" height="1086" alt="Screenshot 2025-10-08 132937" src="https://github.com/user-attachments/assets/791251c6-0325-41d3-a00d-445b1c0f63a3" />
 - Login/Registration pages
+   <img width="2559" height="1542" alt="image" src="https://github.com/user-attachments/assets/cb052232-7f34-4d18-a0bc-9aa34096a67c" />
+  <img width="2559" height="1518" alt="image" src="https://github.com/user-attachments/assets/e55b9d2f-9341-46c3-9f6f-bf58a2d83569" /> 
 - Gaming content pages
+  <img width="2548" height="1506" alt="image" src="https://github.com/user-attachments/assets/325b6a09-1054-4588-b7a9-ac2899e21112" />
+   <img width="2559" height="1299" alt="image" src="https://github.com/user-attachments/assets/96651b18-1ab8-49c2-9e5e-bb942f76d245" />
 - Shopping cart
+  <img width="2531" height="1484" alt="image" src="https://github.com/user-attachments/assets/17a618c8-918f-4d29-a427-6fc3ae1ad7e4" />
 - User profile
+  <img width="2559" height="1499" alt="image" src="https://github.com/user-attachments/assets/5b5e8995-b8d8-40a7-b92a-3ceb653385cd" />
 - Checkout process
 
