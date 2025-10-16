@@ -1,0 +1,207 @@
+openapi: 3.0.3
+info:
+  title: V L V 道場 API
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /:
+    get:
+      summary: Home page
+      responses:
+        '200':
+          description: HTML home page
+  /submit:
+    post:
+      summary: Submit contact form
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                  format: email
+                message:
+                  type: string
+              required: [name, email, message]
+      responses:
+        '302':
+          description: Redirect to success
+  /success:
+    get:
+      summary: Success page
+      responses:
+        '200':
+          description: HTML success page
+  /images/{filename}:
+    get:
+      summary: Serve image by filename
+      parameters:
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Image bytes
+  /register:
+    get:
+      summary: Registration page
+      responses:
+        '200':
+          description: HTML registration page
+    post:
+      summary: Register user
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                email: { type: string, format: email }
+                password: { type: string, format: password }
+              required: [username, email, password]
+      responses:
+        '302':
+          description: Redirect to login
+  /login:
+    get:
+      summary: Login page
+      responses:
+        '200':
+          description: HTML login page
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                password: { type: string, format: password }
+              required: [username, password]
+      responses:
+        '302':
+          description: Redirect home
+  /logout:
+    get:
+      summary: Logout user
+      responses:
+        '302':
+          description: Redirect home
+  /profile:
+    get:
+      summary: User profile
+      responses:
+        '200':
+          description: HTML profile with orders
+        '302':
+          description: Redirect to login if not authenticated
+  /test-profile:
+    get:
+      summary: Debug orders listing
+      responses:
+        '200':
+          description: Basic HTML of orders or error text
+  /cart:
+    get:
+      summary: View cart
+      responses:
+        '200':
+          description: HTML cart page
+        '302':
+          description: Redirect to login
+  /add_to_cart:
+    post:
+      summary: Add item to cart
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                product: { type: string }
+                price_cents: { type: integer, minimum: 1 }
+              required: [product, price_cents]
+      responses:
+        '302':
+          description: Redirect to cart or login
+  /remove_from_cart/{item_id}:
+    post:
+      summary: Remove item from cart
+      parameters:
+        - in: path
+          name: item_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '302':
+          description: Redirect to cart or login
+  /checkout:
+    get:
+      summary: Checkout page
+      responses:
+        '200':
+          description: HTML checkout page
+        '302':
+          description: Redirect to login
+    post:
+      summary: Create order and clear cart
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                payment_method: { type: string }
+                shipping_address: { type: string }
+              required: [payment_method, shipping_address]
+      responses:
+        '302':
+          description: Redirect to profile or back to checkout
+  /purchase:
+    post:
+      summary: Legacy add-to-cart
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                product: { type: string }
+                price_cents: { type: integer, minimum: 1 }
+              required: [product, price_cents]
+      responses:
+        '302':
+          description: Redirect to cart or login
+  /comment:
+    post:
+      summary: Post a comment
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                post_slug: { type: string }
+                content: { type: string }
+              required: [post_slug, content]
+      responses:
+        '302':
+          description: Redirect to home or login
+components: {}
