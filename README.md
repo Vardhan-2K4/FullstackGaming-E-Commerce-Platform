@@ -177,6 +177,16 @@ The application runs with debug mode enabled by default, which includes:
 ### Database Management
 The database is automatically created and initialized when the application starts. Tables are created if they don't exist.
 
+## Documentation
+
+- Comprehensive API and component docs live in `docs/`:
+  - `docs/INDEX.md` — documentation map
+  - `docs/api/server.md` — Flask routes and behaviors
+  - `docs/api/database.md` — database schema and usage
+  - `docs/api/openapi.yaml` — OpenAPI 3 spec for endpoints
+  - `docs/frontend/components.md` — client behavior and templates
+  - `docs/USAGE.md` — cURL usage examples and flows
+
 ## Contributing
 1. Fork the repository
 2. Create a feature branch
